@@ -22,6 +22,6 @@ namespace DTO.Schemas
         public Driver DriverObj { get; set; }
         public School SchoolObj { get; set; }
         public Region RegionObj { get; set; }
-        public List<Student> StudentsObj { get; set}
+        public List<Student> StudentsObj { get; set;  }
     }
 }

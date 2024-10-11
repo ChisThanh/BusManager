@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btn_Revenue = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,12 +60,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(9, 10);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(672, 333);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(504, 271);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -90,20 +92,37 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(665, 392);
+            this.btnLogout.Location = new System.Drawing.Point(506, 309);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(84, 23);
+            this.btnLogout.Size = new System.Drawing.Size(105, 35);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
+            // btn_Revenue
+            // 
+            this.btn_Revenue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Revenue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Revenue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Revenue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Revenue.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Revenue.ForeColor = System.Drawing.Color.White;
+            this.btn_Revenue.Location = new System.Drawing.Point(165, 309);
+            this.btn_Revenue.Name = "btn_Revenue";
+            this.btn_Revenue.Size = new System.Drawing.Size(180, 45);
+            this.btn_Revenue.TabIndex = 2;
+            this.btn_Revenue.Text = "Thống kê";
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(662, 385);
+            this.Controls.Add(this.btn_Revenue);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.guna2DataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Main";
             this.Text = "7";
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
@@ -115,6 +134,7 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btn_Revenue;
     }
 }
 

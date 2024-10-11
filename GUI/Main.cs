@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO.Schemas;
 using GUI.Auth;
+using GUI.UI;
 
 namespace GUI
 {
@@ -23,7 +24,14 @@ namespace GUI
             InitializeComponent();
             this.Load += Form1_Load;
             btnLogout.Click += BtnLogout_Click;
+            btn_Revenue.Click += Btn_Revenue_Click;
             ShowLoginForm();
+        }
+
+        private void Btn_Revenue_Click(object sender, EventArgs e)
+        {
+            frm_Statistical frm_Statistical = new frm_Statistical();
+            frm_Statistical.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
