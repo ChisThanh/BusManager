@@ -184,11 +184,11 @@
       <DependentUpon>NBL_ComponentTrip.cs</DependentUpon>
     </Compile>
     <Compile Include="Heplers\Utils.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="UI\frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="UI\frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,12 +202,6 @@
     </Compile>
     <Compile Include="UI\frm_Statistical.Designer.cs">
       <DependentUpon>frm_Statistical.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\NBL_FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\NBL_FormMain.Designer.cs">
-      <DependentUpon>NBL_FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\NBL_FormTrip.cs">
       <SubType>Form</SubType>
@@ -227,8 +221,8 @@
     <EmbeddedResource Include="Components\NBL_ComponentTrip.resx">
       <DependentUpon>NBL_ComponentTrip.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="UI\frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

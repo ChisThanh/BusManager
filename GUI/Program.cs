@@ -18,7 +18,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NBL_FormTrip());
+            Application.Run(new frm_Main());
         }
     }
 }
