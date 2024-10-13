@@ -17,6 +17,7 @@ namespace DTO.Schemas
         public string Region { get; set; }
         public List<string> Students { get; set; }
         public double Price { get; set; }
+        public string Status { get; set; }
 
         public Bus BusObj { get; set; }
         public Driver DriverObj { get; set; }

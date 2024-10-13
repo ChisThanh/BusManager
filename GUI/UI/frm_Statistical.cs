@@ -40,9 +40,11 @@ namespace GUI.UI
 
             var GetDriverAsync = await dto.GetDriverAsync();
             var GetBusCountAsync = await dto.GetBusCountAsync();
+            var GetTripCountAsync = await dto.GetTripCountAsync();
 
             txt_QuantityDriver.Text = GetDriverAsync.ToString();
             txt_QuantityBus.Text = GetBusCountAsync.ToString();
+            txt_QuantityTrip.Text = GetTripCountAsync.ToString();
         }
 
         private async void load_Chart()
@@ -64,12 +66,12 @@ namespace GUI.UI
             }
 
 
-            var result = await dto.GetMonthlyRevenueAsync(_year);
-            if (result != null && result.Count() > 0)
+            var resultSchool = await dto.GetTotalRevenueBySchoolAsync(_year);
+            if (resultSchool != null && resultSchool.Count() > 0)
             {
-                chart2.Series[0].Points.Clear();
-                foreach (var item in result)
-                    chart2.Series[0].Points.AddXY(item.month, item.monthlyRevenue);
+                chart_School.Series[0].Points.Clear();
+                foreach (var item in resultSchool)
+                    chart_School.Series[0].Points.AddXY(item.school, item.totalRevenue);
             }
 
 
@@ -82,6 +84,7 @@ namespace GUI.UI
             }
 
             txt_TotalRevenue.Text = await dto.GetTotalRevenueByYearAsync(_year);
+
         }
     }
 }

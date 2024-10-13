@@ -26,6 +26,12 @@ namespace DTO.DTO
             _collectionDriver = _database.GetCollection<Driver>("Driver");
         }
 
+        public async Task<long> GetTripCountAsync()
+        {
+            var filter = Builders<Trip>.Filter.Ne(trip => trip.Status, "cancelled");
+            return await _collectionTrip.CountDocumentsAsync(filter);
+        }
+
         public async Task<long> GetBusCountAsync()
         {
             return await _collectionBus.CountDocumentsAsync(FilterDefinition<Bus>.Empty);
@@ -40,16 +46,22 @@ namespace DTO.DTO
         {
             var pipeline = new[]
             {
-                new BsonDocument("$match", new BsonDocument("$expr", new BsonDocument("$eq", new BsonArray { new BsonDocument("$year", "$Trip.Date"), year }))),
+                new BsonDocument("$match",
+                    new BsonDocument
+                    {
+                        { "$expr", new BsonDocument("$eq", new BsonArray { new BsonDocument("$year", "$Date"), year }) },
+                        { "Status", "active" }
+                    }
+                ),
                 new BsonDocument("$group", new BsonDocument
                 {
                     { "_id", new BsonDocument
                         {
-                            { "year", new BsonDocument("$year", "$Trip.Date") },
-                            { "month", new BsonDocument("$month", "$Trip.Date") }
+                            { "year", new BsonDocument("$year", "$Date") },
+                            { "month", new BsonDocument("$month", "$Date") }
                         }
                     },
-                    { "monthlyRevenue", new BsonDocument("$sum", "$Trip.Price") }
+                    { "monthlyRevenue", new BsonDocument("$sum", "$Price") }
                 }),
                 new BsonDocument("$project", new BsonDocument
                 {
@@ -67,8 +79,14 @@ namespace DTO.DTO
         {
             var pipeline = new[]
             {
-            new BsonDocument("$match", new BsonDocument("$expr", new BsonDocument("$eq", new BsonArray { new BsonDocument("$year", "$Trip.Date"), year }))),
-            new BsonDocument("$addFields", new BsonDocument("regionId", new BsonDocument("$toObjectId", "$Trip.Region"))),
+            new BsonDocument("$match",
+                new BsonDocument
+                {
+                    { "$expr", new BsonDocument("$eq", new BsonArray { new BsonDocument("$year", "$Date"), year }) },
+                    { "Status", "active" }
+                }
+            ),
+            new BsonDocument("$addFields", new BsonDocument("regionId", new BsonDocument("$toObjectId", "$Region"))),
             new BsonDocument("$lookup", new BsonDocument
             {
                 { "from", "Region" },
@@ -83,8 +101,8 @@ namespace DTO.DTO
             }),
             new BsonDocument("$group", new BsonDocument
             {
-                { "_id", "$regionData.Region.Name" },
-                { "totalRevenue", new BsonDocument("$sum", "$Trip.Price") }
+                { "_id", "$regionData.Name" },
+                { "totalRevenue", new BsonDocument("$sum", "$Price") }
             }),
             new BsonDocument("$project", new BsonDocument
             {
@@ -93,8 +111,47 @@ namespace DTO.DTO
                 { "totalRevenue", 1 }
             })
         };
-
             var result = await _collectionTrip.Aggregate<RevenueByRegion>(pipeline).ToListAsync();
+            return result;
+        }
+
+        public async Task<List<RevenueBySchool>> GetTotalRevenueBySchoolAsync(int year = 2024)
+        {
+            var pipeline = new[]
+            {
+            new BsonDocument("$match",
+                new BsonDocument
+                {
+                    { "$expr", new BsonDocument("$eq", new BsonArray { new BsonDocument("$year", "$Date"), year }) },
+                    { "Status", "active" }
+                }
+            ),
+            new BsonDocument("$addFields", new BsonDocument("schoolId", new BsonDocument("$toObjectId", "$School"))),
+            new BsonDocument("$lookup", new BsonDocument
+            {
+                { "from", "School" },
+                { "localField", "schoolId" },
+                { "foreignField", "_id" },
+                { "as", "schoolData" }
+            }),
+            new BsonDocument("$unwind", new BsonDocument
+            {
+                { "path", "$schoolData" },
+                { "preserveNullAndEmptyArrays", true }
+            }),
+            new BsonDocument("$group", new BsonDocument
+            {
+                { "_id", "$schoolData.Name" },
+                { "totalRevenue", new BsonDocument("$sum", "$Price") }
+            }),
+            new BsonDocument("$project", new BsonDocument
+            {
+                { "_id", 0 },
+                { "school", "$_id" },
+                { "totalRevenue", 1 }
+            })
+        };
+            var result = await _collectionTrip.Aggregate<RevenueBySchool>(pipeline).ToListAsync();
             return result;
         }
 
@@ -102,11 +159,17 @@ namespace DTO.DTO
         {
             var pipeline = new[]
             {
-                new BsonDocument("$match", new BsonDocument("$expr", new BsonDocument("$eq", new BsonArray { new BsonDocument("$year", "$Trip.Date"), year }))),
+                new BsonDocument("$match",
+                    new BsonDocument
+                    {
+                        { "$expr", new BsonDocument("$eq", new BsonArray { new BsonDocument("$year", "$Date"), year }) },
+                        { "Status", "active" }
+                    }
+                ),
                 new BsonDocument("$group", new BsonDocument
                 {
                     { "_id", BsonNull.Value },
-                    { "totalRevenue", new BsonDocument("$sum", "$Trip.Price") }
+                    { "totalRevenue", new BsonDocument("$sum", "$Price") }
                 }),
                 new BsonDocument("$project", new BsonDocument
                 {
@@ -117,12 +180,16 @@ namespace DTO.DTO
 
             var result = await _collectionTrip.Aggregate<BsonDocument>(pipeline).FirstOrDefaultAsync();
 
-
-            var resultNumber = result?["totalRevenue"].AsInt32; 
+            var resultNumber = result?["totalRevenue"].AsDouble; 
             return resultNumber?.ToString("C0", cultureInfo) ?? "0.00 ₫"; 
         }
 
 
+        public class RevenueBySchool
+        {
+            public string school { get; set; }
+            public double totalRevenue { get; set; }
+        }
 
         public class MonthlyRevenue
         {
@@ -136,7 +203,4 @@ namespace DTO.DTO
             public double totalRevenue { get; set; }
         }
     }
-    
-
-
 }

@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.chart_Revenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_School = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_TotalRevenue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_QuantityBus = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_QuantityDriver = new System.Windows.Forms.Label();
+            this.txt_QuantityBus = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.txt_QuantityTrip = new System.Windows.Forms.Label();
             this.cbx_Year = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.chart_Region = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chart_Revenue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_School)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 15);
+            this.label1.Location = new System.Drawing.Point(119, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 37);
@@ -83,51 +83,53 @@
             // 
             // chart_Revenue
             // 
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.Name = "ChartArea1";
-            this.chart_Revenue.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chart_Revenue.Legends.Add(legend1);
-            this.chart_Revenue.Location = new System.Drawing.Point(16, 228);
+            chartArea4.AxisX.MajorGrid.Enabled = false;
+            chartArea4.Name = "ChartArea1";
+            this.chart_Revenue.ChartAreas.Add(chartArea4);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.chart_Revenue.Legends.Add(legend4);
+            this.chart_Revenue.Location = new System.Drawing.Point(16, 205);
             this.chart_Revenue.Margin = new System.Windows.Forms.Padding(4);
             this.chart_Revenue.Name = "chart_Revenue";
-            series1.ChartArea = "ChartArea1";
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_Revenue.Series.Add(series1);
-            this.chart_Revenue.Size = new System.Drawing.Size(1005, 370);
+            series4.ChartArea = "ChartArea1";
+            series4.IsValueShownAsLabel = true;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart_Revenue.Series.Add(series4);
+            this.chart_Revenue.Size = new System.Drawing.Size(1005, 328);
             this.chart_Revenue.TabIndex = 11;
             this.chart_Revenue.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Doanh thu";
-            this.chart_Revenue.Titles.Add(title1);
+            title4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Doanh thu";
+            this.chart_Revenue.Titles.Add(title4);
             // 
-            // chart2
+            // chart_School
             // 
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Alignment = System.Drawing.StringAlignment.Center;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(16, 606);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(1005, 369);
-            this.chart2.TabIndex = 12;
-            this.chart2.Text = "chart2";
-            title2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "Thống kê";
-            this.chart2.Titles.Add(title2);
+            chartArea5.AxisX.MajorGrid.Enabled = false;
+            chartArea5.Name = "ChartArea1";
+            this.chart_School.ChartAreas.Add(chartArea5);
+            legend5.Alignment = System.Drawing.StringAlignment.Center;
+            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend5.Enabled = false;
+            legend5.Name = "Legend1";
+            this.chart_School.Legends.Add(legend5);
+            this.chart_School.Location = new System.Drawing.Point(16, 534);
+            this.chart_School.Margin = new System.Windows.Forms.Padding(4);
+            this.chart_School.Name = "chart_School";
+            series5.ChartArea = "ChartArea1";
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart_School.Series.Add(series5);
+            this.chart_School.Size = new System.Drawing.Size(1005, 311);
+            this.chart_School.TabIndex = 12;
+            this.chart_School.Text = "chart_School";
+            title5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Title1";
+            title5.Text = "Thống kê theo trường học";
+            this.chart_School.Titles.Add(title5);
             // 
             // guna2ControlBox1
             // 
@@ -136,7 +138,7 @@
             this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1605, 15);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1430, 13);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -151,7 +153,7 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(374, 36);
+            this.guna2Panel1.Location = new System.Drawing.Point(355, 36);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.guna2Panel1.Size = new System.Drawing.Size(200, 141);
@@ -186,21 +188,11 @@
             this.guna2Panel2.Controls.Add(this.txt_QuantityDriver);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.Location = new System.Drawing.Point(627, 36);
+            this.guna2Panel2.Location = new System.Drawing.Point(1120, 36);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.guna2Panel2.Size = new System.Drawing.Size(200, 141);
             this.guna2Panel2.TabIndex = 15;
-            // 
-            // txt_QuantityBus
-            // 
-            this.txt_QuantityBus.AutoSize = true;
-            this.txt_QuantityBus.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_QuantityBus.Location = new System.Drawing.Point(68, 70);
-            this.txt_QuantityBus.Name = "txt_QuantityBus";
-            this.txt_QuantityBus.Size = new System.Drawing.Size(66, 49);
-            this.txt_QuantityBus.TabIndex = 1;
-            this.txt_QuantityBus.Text = "10";
             // 
             // label5
             // 
@@ -212,21 +204,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Số Lượng Tài xế";
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel3.BorderRadius = 10;
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.txt_QuantityBus);
-            this.guna2Panel3.Controls.Add(this.label7);
-            this.guna2Panel3.CustomBorderColor = System.Drawing.Color.Black;
-            this.guna2Panel3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.Location = new System.Drawing.Point(884, 36);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.guna2Panel3.Size = new System.Drawing.Size(200, 141);
-            this.guna2Panel3.TabIndex = 16;
-            // 
             // txt_QuantityDriver
             // 
             this.txt_QuantityDriver.AutoSize = true;
@@ -236,6 +213,31 @@
             this.txt_QuantityDriver.Size = new System.Drawing.Size(66, 49);
             this.txt_QuantityDriver.TabIndex = 1;
             this.txt_QuantityDriver.Text = "10";
+            // 
+            // txt_QuantityBus
+            // 
+            this.txt_QuantityBus.AutoSize = true;
+            this.txt_QuantityBus.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_QuantityBus.Location = new System.Drawing.Point(68, 70);
+            this.txt_QuantityBus.Name = "txt_QuantityBus";
+            this.txt_QuantityBus.Size = new System.Drawing.Size(66, 49);
+            this.txt_QuantityBus.TabIndex = 1;
+            this.txt_QuantityBus.Text = "10";
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel3.BorderRadius = 10;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.txt_QuantityBus);
+            this.guna2Panel3.Controls.Add(this.label7);
+            this.guna2Panel3.CustomBorderColor = System.Drawing.Color.Black;
+            this.guna2Panel3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.Location = new System.Drawing.Point(860, 36);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.guna2Panel3.Size = new System.Drawing.Size(200, 141);
+            this.guna2Panel3.TabIndex = 16;
             // 
             // label7
             // 
@@ -253,10 +255,10 @@
             this.guna2Panel4.BorderRadius = 10;
             this.guna2Panel4.BorderThickness = 1;
             this.guna2Panel4.Controls.Add(this.label10);
-            this.guna2Panel4.Controls.Add(this.label8);
+            this.guna2Panel4.Controls.Add(this.txt_QuantityTrip);
             this.guna2Panel4.CustomBorderColor = System.Drawing.Color.Black;
             this.guna2Panel4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.Location = new System.Drawing.Point(1144, 36);
+            this.guna2Panel4.Location = new System.Drawing.Point(603, 36);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.guna2Panel4.Size = new System.Drawing.Size(200, 141);
@@ -266,28 +268,21 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(65, 25);
+            this.label10.Location = new System.Drawing.Point(54, 25);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 23);
+            this.label10.Size = new System.Drawing.Size(94, 23);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Quận 1";
+            this.label10.Text = "Chuyến đi";
             // 
-            // label8
+            // txt_QuantityTrip
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(70, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 49);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "10";
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.BorderRadius = 10;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.txt_QuantityTrip.AutoSize = true;
+            this.txt_QuantityTrip.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_QuantityTrip.Location = new System.Drawing.Point(70, 70);
+            this.txt_QuantityTrip.Name = "txt_QuantityTrip";
+            this.txt_QuantityTrip.Size = new System.Drawing.Size(66, 49);
+            this.txt_QuantityTrip.TabIndex = 1;
+            this.txt_QuantityTrip.Text = "10";
             // 
             // cbx_Year
             // 
@@ -308,7 +303,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(78, 91);
+            this.label9.Location = new System.Drawing.Point(95, 94);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 23);
             this.label9.TabIndex = 19;
@@ -316,33 +311,40 @@
             // 
             // chart_Region
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart_Region.ChartAreas.Add(chartArea3);
-            legend3.Alignment = System.Drawing.StringAlignment.Center;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend3.Name = "Legend1";
-            this.chart_Region.Legends.Add(legend3);
-            this.chart_Region.Location = new System.Drawing.Point(1028, 228);
+            this.chart_Region.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea6.Name = "ChartArea1";
+            this.chart_Region.ChartAreas.Add(chartArea6);
+            legend6.Alignment = System.Drawing.StringAlignment.Center;
+            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend6.Name = "Legend1";
+            this.chart_Region.Legends.Add(legend6);
+            this.chart_Region.Location = new System.Drawing.Point(1028, 205);
             this.chart_Region.Name = "chart_Region";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart_Region.Series.Add(series3);
-            this.chart_Region.Size = new System.Drawing.Size(641, 747);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.IsValueShownAsLabel = true;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart_Region.Series.Add(series6);
+            this.chart_Region.Size = new System.Drawing.Size(411, 640);
             this.chart_Region.TabIndex = 20;
             this.chart_Region.Text = "chart1";
-            title3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Theo Vùng";
-            this.chart_Region.Titles.Add(title3);
+            title6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Title1";
+            title6.Text = "Theo Vùng";
+            this.chart_Region.Titles.Add(title6);
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // frm_Statistical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1681, 1061);
+            this.ClientSize = new System.Drawing.Size(1503, 905);
             this.Controls.Add(this.chart_Revenue);
             this.Controls.Add(this.chart_Region);
             this.Controls.Add(this.label9);
@@ -353,13 +355,14 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.chart2);
+            this.Controls.Add(this.chart_School);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Statistical";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Statistical";
             ((System.ComponentModel.ISupportInitialize)(this.chart_Revenue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_School)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -377,7 +380,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Revenue;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_School;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label txt_TotalRevenue;
@@ -390,10 +393,10 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.Label txt_QuantityTrip;
         private Guna.UI2.WinForms.Guna2ComboBox cbx_Year;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Region;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
