@@ -251,6 +251,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\NBL_DAL.cs" />
     <Compile Include="DTO\Database.cs" />
     <Compile Include="DTO\DTO_Base.cs" />
     <Compile Include="DTO\DTO_Auth.cs" />

@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace DTO.Schemas
 {
-    public class Region
-    {
-        public ObjectId Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public List<string> Students { get; set; }
-    }
+	public class Region
+	{
+		public ObjectId Id { get; set; }                  
+		public string Name { get; set; }                  
+		public string Description { get; set; }           
+		public List<ObjectId> Students { get; set; }   
+	}
+
 }
