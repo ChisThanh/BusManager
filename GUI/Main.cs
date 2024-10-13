@@ -25,7 +25,21 @@ namespace GUI
             this.Load += Form1_Load;
             btnLogout.Click += BtnLogout_Click;
             btn_Revenue.Click += Btn_Revenue_Click;
+            btn_Bus.Click += Btn_Bus_Click;
+            btn_Driver.Click += Btn_Driver_Click;
             ShowLoginForm();
+        }
+
+        private void Btn_Driver_Click(object sender, EventArgs e)
+        {
+            NNM_frmDriver frmDriver = new NNM_frmDriver();
+            frmDriver.Show();
+        }
+
+        private void Btn_Bus_Click(object sender, EventArgs e)
+        {
+            NNM_frmBus frmBus = new NNM_frmBus();
+            frmBus.Show();
         }
 
         private void Btn_Revenue_Click(object sender, EventArgs e)

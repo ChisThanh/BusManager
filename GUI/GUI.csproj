@@ -186,6 +186,18 @@
     <Compile Include="UI\frm_Statistical.Designer.cs">
       <DependentUpon>frm_Statistical.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\NNM_frmBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NNM_frmBus.Designer.cs">
+      <DependentUpon>NNM_frmBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NNM_frmDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NNM_frmDriver.Designer.cs">
+      <DependentUpon>NNM_frmDriver.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Auth\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,8 +219,13 @@
     <EmbeddedResource Include="UI\frm_Statistical.resx">
       <DependentUpon>frm_Statistical.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\NNM_frmBus.resx">
+      <DependentUpon>NNM_frmBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NNM_frmDriver.resx">
+      <DependentUpon>NNM_frmDriver.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include=".env" />
-    <None Include=".env.example" />
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
     <None Include="packages.config" />
