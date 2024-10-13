@@ -53,25 +53,33 @@ namespace GUI
 
         public void showForm(Form form)
         {
-            if (frmActive != null)
-            {
-                frmActive.Close();
-            }
+            if (frmActive != null) frmActive.Close();
+            if (frmActive == form) return;
+
             frmActive = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             panelMain.Controls.Add(form);
-            panelMain.Tag = form;
-            form.BringToFront();
             form.Show();
-
         }
 
         private void chuyếnĐiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NBL_FormTrip frm_Trip = new NBL_FormTrip();
             showForm(frm_Trip);
+        }
+
+        private void họcSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NVH_QLHocSinh frm_Student = new NVH_QLHocSinh();
+            showForm(frm_Student);
+        }
+
+        private void trườngHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NVH_QLTruongHoc frm_School = new NVH_QLTruongHoc();
+            showForm(frm_School);
         }
     }
 }

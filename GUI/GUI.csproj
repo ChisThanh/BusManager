@@ -203,6 +203,18 @@
     <Compile Include="UI\frm_Statistical.Designer.cs">
       <DependentUpon>frm_Statistical.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\NVH_QLHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NVH_QLHocSinh.Designer.cs">
+      <DependentUpon>NVH_QLHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NVH_QLTruongHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NVH_QLTruongHoc.Designer.cs">
+      <DependentUpon>NVH_QLTruongHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\NBL_FormTrip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +246,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NBL_FormTrip.resx">
       <DependentUpon>NBL_FormTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NVH_QLHocSinh.resx">
+      <DependentUpon>NVH_QLHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NVH_QLTruongHoc.resx">
+      <DependentUpon>NVH_QLTruongHoc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".env" />
     <None Include="libmongocrypt.dylib" />
