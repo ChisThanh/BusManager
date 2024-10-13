@@ -253,6 +253,7 @@
     <EmbeddedResource Include="UI\NVH_QLTruongHoc.resx">
       <DependentUpon>NVH_QLTruongHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".env.exemple" />
     <None Include=".env" />
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
