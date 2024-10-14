@@ -257,9 +257,7 @@
     <Compile Include="DTO\DTO_Auth.cs" />
     <Compile Include="DTO\DTO_Bus.cs" />
     <Compile Include="DTO\DTO_Statistical.cs" />
-    <Compile Include="DTO\DTO_Student.cs" />
     <Compile Include="DTO\DTO_Driver.cs" />
-    <Compile Include="DTO\DTO_Region.cs" />
     <Compile Include="DTO\DTO_Trip.cs" />
     <Compile Include="DTO\DTO_School.cs" />
     <Compile Include="DTO\DTO_Region.cs" />

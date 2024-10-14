@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace DTO.Schemas
 {
     public class Bus
     {
+        
         public ObjectId Id { get; set; }
         public string LicensePlate { get; set; }
         public string Model { get; set; }

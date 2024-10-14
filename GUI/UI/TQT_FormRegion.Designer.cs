@@ -59,9 +59,10 @@
             this.cbb_Region.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbb_Region.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbb_Region.ItemHeight = 30;
-            this.cbb_Region.Location = new System.Drawing.Point(40, 67);
+            this.cbb_Region.Location = new System.Drawing.Point(53, 82);
+            this.cbb_Region.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbb_Region.Name = "cbb_Region";
-            this.cbb_Region.Size = new System.Drawing.Size(310, 36);
+            this.cbb_Region.Size = new System.Drawing.Size(412, 36);
             this.cbb_Region.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -69,9 +70,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.IndianRed;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(344, 12);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(459, 15);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(283, 38);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(359, 47);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "MANAGE REGION";
             // 
@@ -85,9 +87,10 @@
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(40, 110);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(53, 135);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(310, 144);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(413, 177);
             this.guna2GroupBox1.TabIndex = 2;
             this.guna2GroupBox1.Text = "Information Region";
             // 
@@ -102,12 +105,13 @@
             this.txt_Description.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Description.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Description.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Description.Location = new System.Drawing.Point(90, 83);
+            this.txt_Description.Location = new System.Drawing.Point(120, 102);
+            this.txt_Description.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.PasswordChar = '\0';
             this.txt_Description.PlaceholderText = "";
             this.txt_Description.SelectedText = "";
-            this.txt_Description.Size = new System.Drawing.Size(200, 54);
+            this.txt_Description.Size = new System.Drawing.Size(267, 66);
             this.txt_Description.TabIndex = 3;
             // 
             // txt_NameRegion
@@ -121,29 +125,32 @@
             this.txt_NameRegion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_NameRegion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_NameRegion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_NameRegion.Location = new System.Drawing.Point(90, 57);
+            this.txt_NameRegion.Location = new System.Drawing.Point(120, 70);
+            this.txt_NameRegion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_NameRegion.Name = "txt_NameRegion";
             this.txt_NameRegion.PasswordChar = '\0';
             this.txt_NameRegion.PlaceholderText = "";
             this.txt_NameRegion.SelectedText = "";
-            this.txt_NameRegion.Size = new System.Drawing.Size(200, 20);
+            this.txt_NameRegion.Size = new System.Drawing.Size(267, 25);
             this.txt_NameRegion.TabIndex = 2;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(16, 101);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 124);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(56, 15);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(71, 18);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Description";
             // 
             // lbl_NameRegion
             // 
             this.lbl_NameRegion.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_NameRegion.Location = new System.Drawing.Point(16, 56);
+            this.lbl_NameRegion.Location = new System.Drawing.Point(21, 69);
+            this.lbl_NameRegion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_NameRegion.Name = "lbl_NameRegion";
-            this.lbl_NameRegion.Size = new System.Drawing.Size(31, 15);
+            this.lbl_NameRegion.Size = new System.Drawing.Size(40, 18);
             this.lbl_NameRegion.TabIndex = 0;
             this.lbl_NameRegion.Text = "Name";
             // 
@@ -158,9 +165,10 @@
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(40, 270);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(53, 332);
+            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(310, 108);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(413, 133);
             this.guna2GroupBox2.TabIndex = 3;
             this.guna2GroupBox2.Text = "Function";
             // 
@@ -173,9 +181,10 @@
             this.btn_Close.FillColor = System.Drawing.Color.Silver;
             this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Close.ForeColor = System.Drawing.Color.White;
-            this.btn_Close.Location = new System.Drawing.Point(225, 56);
+            this.btn_Close.Location = new System.Drawing.Point(300, 69);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(65, 33);
+            this.btn_Close.Size = new System.Drawing.Size(87, 41);
             this.btn_Close.TabIndex = 3;
             this.btn_Close.Text = "Close";
             // 
@@ -188,9 +197,10 @@
             this.btn_Delete.FillColor = System.Drawing.Color.Silver;
             this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Delete.ForeColor = System.Drawing.Color.White;
-            this.btn_Delete.Location = new System.Drawing.Point(147, 56);
+            this.btn_Delete.Location = new System.Drawing.Point(196, 69);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(72, 33);
+            this.btn_Delete.Size = new System.Drawing.Size(96, 41);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             // 
@@ -203,9 +213,10 @@
             this.btn_Update.FillColor = System.Drawing.Color.Silver;
             this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Update.ForeColor = System.Drawing.Color.White;
-            this.btn_Update.Location = new System.Drawing.Point(75, 56);
+            this.btn_Update.Location = new System.Drawing.Point(100, 69);
+            this.btn_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(66, 34);
+            this.btn_Update.Size = new System.Drawing.Size(88, 42);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             // 
@@ -218,9 +229,10 @@
             this.btn_Insert.FillColor = System.Drawing.Color.Silver;
             this.btn_Insert.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Insert.ForeColor = System.Drawing.Color.White;
-            this.btn_Insert.Location = new System.Drawing.Point(11, 56);
+            this.btn_Insert.Location = new System.Drawing.Point(15, 69);
+            this.btn_Insert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(58, 33);
+            this.btn_Insert.Size = new System.Drawing.Size(77, 41);
             this.btn_Insert.TabIndex = 0;
             this.btn_Insert.Text = "Insert";
             // 
@@ -248,10 +260,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Students.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Students.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Students.Location = new System.Drawing.Point(379, 67);
+            this.dgv_Students.Location = new System.Drawing.Point(505, 82);
+            this.dgv_Students.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_Students.Name = "dgv_Students";
             this.dgv_Students.RowHeadersVisible = false;
-            this.dgv_Students.Size = new System.Drawing.Size(588, 311);
+            this.dgv_Students.RowHeadersWidth = 51;
+            this.dgv_Students.Size = new System.Drawing.Size(784, 383);
             this.dgv_Students.TabIndex = 4;
             this.dgv_Students.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Students.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -277,14 +291,16 @@
             // 
             // TQT_FormRegion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 420);
+            this.ClientSize = new System.Drawing.Size(1304, 517);
             this.Controls.Add(this.dgv_Students);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.cbb_Region);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TQT_FormRegion";
             this.Text = "TQT_FormRegion";
             this.guna2GroupBox1.ResumeLayout(false);

@@ -81,5 +81,23 @@ namespace GUI
             NVH_QLTruongHoc frm_School = new NVH_QLTruongHoc();
             showForm(frm_School);
         }
+
+        private void xeBusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NNM_frmBus frm_Bus = new NNM_frmBus();
+            showForm(frm_Bus);
+        }
+
+        private void tàiXếToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NNM_frmDriver frm_Driver = new NNM_frmDriver();
+            showForm(frm_Driver);
+        }
+
+        private void vùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TQT_FormRegion frm_Region = new TQT_FormRegion();
+            showForm(frm_Region);
+        }
     }
 }
