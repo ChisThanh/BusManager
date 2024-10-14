@@ -117,53 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bus_planned_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bus_planned_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="uncheck_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uncheck_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colored_star_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colored_star_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bus_finished_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bus_finished_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\star_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sort_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sort_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filter_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filter_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clear_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clear_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="insert_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\insert_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bust_running_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bust_running_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="update_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\update_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bus_cancelled_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bus_cancelled_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loading_picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading_picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>78</value>
+  </metadata>
 </root>

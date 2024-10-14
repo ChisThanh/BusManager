@@ -251,11 +251,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\NBL_DAL.cs" />
     <Compile Include="DTO\Database.cs" />
     <Compile Include="DTO\DTO_Base.cs" />
     <Compile Include="DTO\DTO_Auth.cs" />
+    <Compile Include="DTO\DTO_Bus.cs" />
+    <Compile Include="DTO\DTO_Statistical.cs" />
+    <Compile Include="DTO\DTO_Driver.cs" />
+    <Compile Include="DTO\DTO_Trip.cs" />
+    <Compile Include="DTO\DTO_School.cs" />
+    <Compile Include="DTO\DTO_Region.cs" />
+    <Compile Include="DTO\DTO_Student.cs" />
     <Compile Include="DTO\DTO_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schemas\Bus.cs" />
+    <Compile Include="Schemas\Driver.cs" />
+    <Compile Include="Schemas\Region.cs" />
+    <Compile Include="Schemas\School.cs" />
+    <Compile Include="Schemas\Student.cs" />
+    <Compile Include="Schemas\Trip.cs" />
+    <Compile Include="Schemas\Region.cs" />
+    <Compile Include="Schemas\Student.cs" />
     <Compile Include="Schemas\User.cs" />
   </ItemGroup>
   <ItemGroup>

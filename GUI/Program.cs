@@ -1,8 +1,11 @@
-﻿using System;
+﻿using GUI.UI;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.UI;
 
 namespace GUI
 {
@@ -16,7 +19,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new frm_Main());
         }
     }
 }
