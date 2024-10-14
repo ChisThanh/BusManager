@@ -166,6 +166,24 @@ namespace GUI.UI
 				ReadOnly = true,
 				Visible = false
 			});
+
+			dgv_Student.Columns.Add(new DataGridViewTextBoxColumn
+			{
+				Name = "School",
+				HeaderText = "Trường Học",
+				DataPropertyName = "School",
+				ReadOnly = true,
+				Visible = false
+			});
+
+			dgv_Student.Columns.Add(new DataGridViewTextBoxColumn
+			{
+				Name = "SchoolObj",
+				HeaderText = "Đối Tượng",
+				DataPropertyName = "SchoolObj",
+				ReadOnly = true,
+				Visible = false
+			});
 		}
 
 		private void Btn_Insert_Click(object sender, EventArgs e)

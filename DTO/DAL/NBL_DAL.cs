@@ -243,7 +243,6 @@ namespace DTO.DAL
 			return new List<Trip>();
 		}
 
-
 		public Bus findBusById(string id)
 		{
 			return bus_collection.Find(b => b.Id == ObjectId.Parse(id)).FirstOrDefault();

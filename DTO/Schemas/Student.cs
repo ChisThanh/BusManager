@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,10 @@ namespace DTO.Schemas
         public DateTime DoB { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
+        public string School { get; set; }
         public List<string> Schedules { get; set; }
-    }
+
+		[BsonIgnore]
+		public School SchoolObj { get; set; }
+	}
 }
