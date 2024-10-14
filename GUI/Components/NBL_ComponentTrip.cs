@@ -51,7 +51,7 @@ namespace GUI.Components
 		{
 			lbl_Date.Text = trip.Date.ToLongDateString();
 			lbl_Bus.Text = trip.BusObj?.LicensePlate ?? "Bus";
-			lbl_School.Text = trip.SchoolObj?.Name ?? "School";
+			lbl_School.Text = shortenName(trip.SchoolObj?.Name ?? "School");
 			lbl_Region.Text = trip.RegionObj?.Name ?? "Region";
 
 			if (trip.Status == "active")
@@ -81,6 +81,21 @@ namespace GUI.Components
 				pnl_Trip.FillColor = Color.LightCoral;
 				pnl_Trip.FillColor2 = Color.Salmon;
 			}
+		}
+
+		private string shortenName(string name)
+		{
+			if (name.StartsWith("Trường Trung Học Phổ Thông Chuyên"))
+			{
+				return name.Replace("Trường Trung Học Phổ Thông Chuyên", "THPTC").Trim();
+			}
+
+			if (name.StartsWith("Trường Trung Học Phổ Thông"))
+			{
+				return name.Replace("Trường Trung Học Phổ Thông", "THPT").Trim();
+			}
+
+			return name;
 		}
 
 		public void ShowRibbon()

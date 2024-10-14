@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NBL_FormTrip));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.pnl_Trips = new Guna.UI2.WinForms.Guna2Panel();
 			this.pbx_Loading = new Guna.UI2.WinForms.Guna2PictureBox();
 			this.pnl_Properties = new Guna.UI2.WinForms.Guna2Panel();
@@ -96,7 +96,7 @@
 			this.pnl_Trips.Dock = System.Windows.Forms.DockStyle.Left;
 			this.pnl_Trips.Location = new System.Drawing.Point(0, 0);
 			this.pnl_Trips.Name = "pnl_Trips";
-			this.pnl_Trips.Size = new System.Drawing.Size(590, 800);
+			this.pnl_Trips.Size = new System.Drawing.Size(710, 800);
 			this.pnl_Trips.TabIndex = 0;
 			// 
 			// pbx_Loading
@@ -106,7 +106,7 @@
 			this.pbx_Loading.ImageRotate = 0F;
 			this.pbx_Loading.Location = new System.Drawing.Point(0, 0);
 			this.pbx_Loading.Name = "pbx_Loading";
-			this.pbx_Loading.Size = new System.Drawing.Size(590, 800);
+			this.pbx_Loading.Size = new System.Drawing.Size(710, 800);
 			this.pbx_Loading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pbx_Loading.TabIndex = 0;
 			this.pbx_Loading.TabStop = false;
@@ -117,7 +117,7 @@
 			this.pnl_Properties.Controls.Add(this.pnl_Information);
 			this.pnl_Properties.Controls.Add(this.pnl_Control);
 			this.pnl_Properties.Dock = System.Windows.Forms.DockStyle.Right;
-			this.pnl_Properties.Location = new System.Drawing.Point(600, 0);
+			this.pnl_Properties.Location = new System.Drawing.Point(720, 0);
 			this.pnl_Properties.Name = "pnl_Properties";
 			this.pnl_Properties.Size = new System.Drawing.Size(680, 800);
 			this.pnl_Properties.TabIndex = 1;
@@ -309,27 +309,27 @@
 			// 
 			// dgv_Student
 			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			this.dgv_Student.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+			this.dgv_Student.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
 			this.dgv_Student.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgv_Student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgv_Student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
 			this.dgv_Student.ColumnHeadersHeight = 4;
 			this.dgv_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgv_Student.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgv_Student.DefaultCellStyle = dataGridViewCellStyle12;
 			this.dgv_Student.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.dgv_Student.Location = new System.Drawing.Point(350, 63);
 			this.dgv_Student.Name = "dgv_Student";
@@ -848,7 +848,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(1280, 800);
+			this.ClientSize = new System.Drawing.Size(1400, 800);
 			this.Controls.Add(this.pnl_Properties);
 			this.Controls.Add(this.pnl_Trips);
 			this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

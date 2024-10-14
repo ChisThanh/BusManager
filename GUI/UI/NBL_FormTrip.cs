@@ -31,6 +31,7 @@ namespace GUI.UI
 			Load += NBL_FormTrip_Load;
 			dtp_Date.ValueChanged += Dtp_Date_ValueChanged;
 			cbx_Bus.SelectedIndexChanged += Cbx_Bus_SelectedIndexChanged;
+			cbx_School.SelectedIndexChanged += Cbx_School_SelectedIndexChanged;
 			cbx_Region.SelectedIndexChanged += Cbx_Region_SelectedIndexChanged;
 			//dgv_Student.DataSourceChanged += Dgv_Student_DataSourceChanged;
 			btn_Insert.Click += Btn_Insert_Click;
@@ -226,10 +227,10 @@ namespace GUI.UI
 
 			double price = double.Parse(tbx_Price.Text);
 
-			List<string> students = new List<string>();
+			List<ObjectId> students = new List<ObjectId>();
 			foreach (DataGridViewRow row in dgv_Student.Rows)
 			{
-				students.Add(row.Cells["Id"].Value.ToString());
+				students.Add(ObjectId.Parse(row.Cells["Id"].Value.ToString()));
 			}
 
 			if (students.Count == 0)
@@ -240,10 +241,10 @@ namespace GUI.UI
 
 			Trip trip = new Trip();
 			trip.Date = date;
-			trip.Bus = bus;
-			trip.Driver = driver;
-			trip.Region = region;
-			trip.School = school;
+			trip.Bus = ObjectId.Parse(bus);
+			trip.Driver = ObjectId.Parse(driver);
+			trip.Region = ObjectId.Parse(region);
+			trip.School = ObjectId.Parse(school);
 			trip.Price = price;
 			trip.Students = students;
 			trip.Status = "active";
@@ -311,30 +312,30 @@ namespace GUI.UI
 
 			if (cbx_Bus.SelectedValue != null)
 			{
-				trip.Bus = cbx_Bus.SelectedValue.ToString();
+				trip.Bus = ObjectId.Parse(cbx_Bus.SelectedValue.ToString());
 			}
 
 			if (cbx_Driver.SelectedValue != null)
 			{
-				trip.Driver = cbx_Driver.SelectedValue.ToString();
+				trip.Driver = ObjectId.Parse(cbx_Driver.SelectedValue.ToString());
 			}
 
 			if (cbx_School.SelectedValue != null)
 			{
-				trip.School = cbx_School.SelectedValue.ToString();
+				trip.School = ObjectId.Parse(cbx_School.SelectedValue.ToString());
 			}
 
 			if (cbx_Region.SelectedValue != null)
 			{
-				trip.Region = cbx_Region.SelectedValue.ToString();
+				trip.Region = ObjectId.Parse(cbx_Region.SelectedValue.ToString());
 			}
 
 			trip.Price = double.Parse(tbx_Price.Text);
 
-			List<string> students = new List<string>();
+			List<ObjectId> students = new List<ObjectId>();
 			foreach (DataGridViewRow row in dgv_Student.Rows)
 			{
-				students.Add(row.Cells["Id"].Value.ToString());
+				students.Add(ObjectId.Parse(row.Cells["Id"].Value.ToString()));
 			}
 
 			if (students.Count != 0)
@@ -342,15 +343,23 @@ namespace GUI.UI
 				trip.Students = students;
 			}
 
-			bool isUpdated = dal.updateTrip(trip);
+			int isUpdated = dal.updateTrip(trip);
 
-			if (isUpdated)
+			if (isUpdated == 1)
 			{
 				MessageBox.Show("Cập nhật chuyến đi thành công", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				reloadTrips(dal.getTripsWithDetails());
 				reset();
 			}
-			else
+			else if (isUpdated == -2)
+			{
+				MessageBox.Show("Xe buýt không thể chạy hai lần một ngày", "Lỗi Logic", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if (isUpdated == -1)
+			{
+				MessageBox.Show("Tài xế không thể lái hai lần một ngày", "Lỗi Logic", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if(isUpdated == 0)
 			{
 				MessageBox.Show("Không tìm thấy chuyến đi nào", "Lỗi Thực Hiện", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
@@ -458,23 +467,34 @@ namespace GUI.UI
 
 			string region = cbx_Region.SelectedValue.ToString();
 
+			if (cbx_School.SelectedValue == null)
+			{
+				MessageBox.Show("Chưa chọn trường học", "Lỗi Giá Trị", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			string school = cbx_School.SelectedValue.ToString();
+
 			if (tbx_Capacity.Text == "0" || tbx_Capacity.Text == null)
 			{
 				MessageBox.Show("Chưa chọn xe buýt", "Lỗi Giá Trị", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
-			List<Student> students = dal.autoAddStudents(region, int.Parse(tbx_Capacity.Text), dtp_Date.Value);
+			List<Student> students = dal.autoAddStudents(region, school, int.Parse(tbx_Capacity.Text), dtp_Date.Value);
 
-			if (students.Count == 0)
+			if (students == null || students.Count == 0)
 			{
 				MessageBox.Show("Không có sinh viên nào trong vùng hay đã được xếp lịch hết", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				return;
 			}
 
-			selected_students = students;
-			dgv_Student.DataSource = null;
-			dgv_Student.DataSource = selected_students;
+			//selected_students = students;
+			//dgv_Student.DataSource = null;
+			//dgv_Student.DataSource = selected_students;
+
+			dgv_Student.DataSource = students;
+
 			tbx_Quantity.Text = dgv_Student.Rows.Count.ToString();
 			tbx_Price.Text = (dgv_Student.Rows.Count * 2000 + int.Parse(tbx_Capacity.Text) * 5000 + 250000).ToString();
 		}
@@ -492,22 +512,7 @@ namespace GUI.UI
 			//cbx_Driver.ValueMember = "ID";
 			//cbx_Driver.DisplayMember = "Name";
 
-			if (cbx_Region.SelectedIndex != -1)
-			{
-				if (!ObjectId.TryParse(cbx_Region.SelectedValue.ToString(), out ObjectId id))
-				{
-					return;
-				}
-
-				List<Student> students = dal.autoAddStudents(cbx_Region.SelectedValue.ToString(), 9999, dtp_Date.Value);
-
-				cbx_Student.DataSource = students;
-				cbx_Student.ValueMember = "ID";
-				cbx_Student.DisplayMember = "Name";
-
-				cbx_Student.SelectedIndex = -1;
-				cbx_Student.SelectedIndex = -1;
-			}
+			autoloadStudents();
 		}
 
 		private void Cbx_Bus_SelectedIndexChanged(object sender, EventArgs e)
@@ -526,16 +531,36 @@ namespace GUI.UI
 			}
 		}
 
+		private void Cbx_School_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			autoloadStudents();
+		}
+
 		private void Cbx_Region_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (cbx_Region.SelectedIndex != -1)
+			autoloadStudents();
+		}
+
+		private void autoloadStudents()
+		{
+			if (cbx_School.SelectedIndex != -1 && cbx_Region.SelectedIndex != -1)
 			{
-				if (!ObjectId.TryParse(cbx_Region.SelectedValue.ToString(), out ObjectId id))
+				if (!ObjectId.TryParse(cbx_School.SelectedValue.ToString(), out ObjectId sid))
 				{
 					return;
 				}
 
-				List<Student> students = dal.autoAddStudents(cbx_Region.SelectedValue.ToString(), 9999, dtp_Date.Value);
+				if (!ObjectId.TryParse(cbx_Region.SelectedValue.ToString(), out ObjectId rid))
+				{
+					return;
+				}
+
+				List<Student> students = dal.autoAddStudents(cbx_Region.SelectedValue.ToString(), cbx_School.SelectedValue.ToString(), 9999, dtp_Date.Value);
+
+				if (students == null)
+				{
+					return;
+				}
 
 				cbx_Student.DataSource = students;
 				cbx_Student.ValueMember = "ID";
@@ -576,8 +601,6 @@ namespace GUI.UI
 			for (int i = 0; i < trips.Count; i = i + 1)
 			{
 				Trip trip = trips[i];
-				string abc = trip.Bus;
-				var abdc = trip.BusObj;
 
 				NBL_ComponentTrip trip_component = new NBL_ComponentTrip(trip);
 
@@ -608,10 +631,10 @@ namespace GUI.UI
 				Trip trip = component.TripVariable;
 
 				dtp_Date.Value = trip.Date;
-				cbx_Bus.SelectedValue = ObjectId.Parse(trip.Bus);
-				cbx_Driver.SelectedValue = ObjectId.Parse(trip.Driver);
-				cbx_School.SelectedValue = ObjectId.Parse(trip.School);
-				cbx_Region.SelectedValue = ObjectId.Parse(trip.Region);
+				cbx_Bus.SelectedValue = trip.Bus;
+				cbx_Driver.SelectedValue = trip.Driver;
+				cbx_School.SelectedValue = trip.School;
+				cbx_Region.SelectedValue = trip.Region;
 
 				//selected_students.Clear();
 				//selected_students = trip.StudentsObj;

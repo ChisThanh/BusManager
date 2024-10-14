@@ -41,12 +41,12 @@ namespace DTO.DAL
 		{
 			foreach (Trip trip in trips)
 			{
-				trip.BusObj = bus_collection.Find(b => b.Id == ObjectId.Parse(trip.Bus)).FirstOrDefault();
-				trip.DriverObj = driver_collection.Find(d => d.Id == ObjectId.Parse(trip.Driver)).FirstOrDefault();
-				trip.SchoolObj = school_collection.Find(s => s.Id == ObjectId.Parse(trip.School)).FirstOrDefault();
-				trip.RegionObj = region_collection.Find(r => r.Id == ObjectId.Parse(trip.Region)).FirstOrDefault();
+				trip.BusObj = bus_collection.Find(b => b.Id == trip.Bus).FirstOrDefault();
+				trip.DriverObj = driver_collection.Find(d => d.Id == trip.Driver).FirstOrDefault();
+				trip.SchoolObj = school_collection.Find(s => s.Id == trip.School).FirstOrDefault();
+				trip.RegionObj = region_collection.Find(r => r.Id == trip.Region).FirstOrDefault();
 				trip.StudentsObj = student_collection
-					.Find(s => trip.Students.Contains(s.Id.ToString()))
+					.Find(s => trip.Students.Contains(s.Id))
 					.ToList();
 			}
 
@@ -62,7 +62,7 @@ namespace DTO.DAL
 			var used_buses_id = trips_on_date.Select(t => t.Bus).ToList();
 
 			var avaiable_buses = bus_collection
-				.Find(b => !used_buses_id.Contains(b.Id.ToString()))
+				.Find(b => !used_buses_id.Contains(b.Id))
 				.ToList();
 
 			return avaiable_buses;
@@ -77,7 +77,7 @@ namespace DTO.DAL
 			var used_drivers_id = trips_on_date.Select(t => t.Driver).ToList();
 
 			var avaiable_drivers = driver_collection
-				.Find(d => !used_drivers_id.Contains(d.Id.ToString()))
+				.Find(d => !used_drivers_id.Contains(d.Id))
 				.ToList();
 
 			return avaiable_drivers;
@@ -85,24 +85,40 @@ namespace DTO.DAL
 
 		public int insertTrip(Trip trip)
 		{
-			var existing_bus = trip_collection.Find(t => t.Date == trip.Date && t.Bus == trip.Bus).FirstOrDefault();
+			var start = trip.Date.Date;
+			var end = trip.Date.Date.AddDays(1).AddTicks(-1);
 
+			var existing_bus = trip_collection.Find(t => t.Date >= start && t.Date <= end && t.Bus == trip.Bus).FirstOrDefault();
 			if (existing_bus != null)
 			{
 				return -2;
 			}
 
-			var existing_driver = trip_collection.Find(t => t.Date == trip.Date && t.Driver == trip.Driver).FirstOrDefault();
-
+			var existing_driver = trip_collection.Find(t => t.Date >= start && t.Date <= end && t.Driver == trip.Driver).FirstOrDefault();
 			if (existing_driver != null)
 			{
 				return -1;
 			}
 
-			 trip_collection.InsertOne(trip);
+			var existing_bus_other = trip_collection.Find(t => t.Date == trip.Date && t.Bus == trip.Bus).FirstOrDefault();
 
+			if (existing_bus_other != null)
+			{
+				return -2;
+			}
+
+			var existing_driver_other = trip_collection.Find(t => t.Date == trip.Date && t.Driver == trip.Driver).FirstOrDefault();
+
+			if (existing_driver_other != null)
+			{
+				return -1;
+			}
+
+			trip_collection.InsertOne(trip);
 			return 1;
 		}
+
+
 
 		public bool deleteTrip(ObjectId id)
 		{
@@ -111,8 +127,37 @@ namespace DTO.DAL
 			return result.DeletedCount > 0;
 		}
 
-		public bool updateTrip(Trip trip)
+		public int updateTrip(Trip trip)
 		{
+			var start = trip.Date.Date;
+			var end = trip.Date.Date.AddDays(1).AddTicks(-1);
+
+			var existing_bus = trip_collection.Find(t => t.Date >= start && t.Date <= end && t.Bus == trip.Bus).FirstOrDefault();
+			if (existing_bus != null)
+			{
+				return -2;
+			}
+
+			var existing_driver = trip_collection.Find(t => t.Date >= start && t.Date <= end && t.Driver == trip.Driver).FirstOrDefault();
+			if (existing_driver != null)
+			{
+				return -1;
+			}
+
+			var existing_bus_other = trip_collection.Find(t => t.Date == trip.Date && t.Bus == trip.Bus).FirstOrDefault();
+
+			if (existing_bus_other != null)
+			{
+				return -2;
+			}
+
+			var existing_driver_other = trip_collection.Find(t => t.Date == trip.Date && t.Driver == trip.Driver).FirstOrDefault();
+
+			if (existing_driver_other != null)
+			{
+				return -1;
+			}
+
 			var update_data = Builders<Trip>.Update
 				.Set(t => t.Date, trip.Date)
 				.Set(t => t.Bus, trip.Bus)
@@ -125,7 +170,14 @@ namespace DTO.DAL
 
 			var result = trip_collection.UpdateOne(t => t.Id == trip.Id, update_data);
 
-			return result.ModifiedCount > 0;
+			if(result.ModifiedCount > 0)
+			{
+				return 1;
+			}
+			else
+			{
+				return 0;
+			}
 		}
 
 		public bool cancelTrip(ObjectId id)
@@ -149,16 +201,21 @@ namespace DTO.DAL
 			return trip_collection.Find(t => t.Id == id).FirstOrDefault();
 		}
 
-		public List<Student> autoAddStudents(string region, int limit, DateTime date)
+		public List<Student> autoAddStudents(string region, string school, int limit, DateTime date)
 		{
 			var regions = region_collection.Find(r => r.Id == ObjectId.Parse(region)).FirstOrDefault();
-
 			if (regions == null)
 			{
-				return new List<Student>();
+				return null;
 			}
 
 			var students_id_in_region = regions.Students;
+
+			var schools = school_collection.Find(s => s.Id == ObjectId.Parse(school)).FirstOrDefault();
+			if (schools == null)
+			{
+				return null;
+			}
 
 			var trips_on_date = trip_collection
 				.Find(t => t.Date >= date.Date && t.Date < date.Date.AddDays(1))
@@ -168,14 +225,15 @@ namespace DTO.DAL
 				.SelectMany(t => t.Students)
 				.ToList();
 
-			var students_in_region = student_collection
+			var students_in_region_and_school = student_collection
 				.Find(s => students_id_in_region.Contains(s.Id) &&
-							!students_in_trip.Contains(s.Id.ToString()) &&
-							s.Schedules.Contains(date.ToString("yyyy-MM-dd")))
+						   s.School == ObjectId.Parse(school) &&
+						   !students_in_trip.Contains(s.Id) &&
+						   s.Schedules.Contains(date.ToString("yyyy-MM-dd")))
 				.Limit(limit)
 				.ToList();
 
-			return students_in_region;
+			return students_in_region_and_school;
 		}
 
 
@@ -189,22 +247,22 @@ namespace DTO.DAL
 
 		public List<Trip> getTripsFilteredByDriver(string driver)
 		{
-			return withDetails(trip_collection.Find(t => t.Driver == driver).ToList());
+			return withDetails(trip_collection.Find(t => t.Driver == ObjectId.Parse(driver)).ToList());
 		}
 
 		public List<Trip> getTripsFilteredByBus(string bus)
 		{
-			return withDetails(trip_collection.Find(t => t.Bus == bus).ToList());
+			return withDetails(trip_collection.Find(t => t.Bus == ObjectId.Parse(bus)).ToList());
 		}
 
 		public List<Trip> getTripsFilteredBySchool(string school)
 		{
-			return withDetails(trip_collection.Find(t => t.School == school).ToList());
+			return withDetails(trip_collection.Find(t => t.School == ObjectId.Parse(school)).ToList());
 		}
 
 		public List<Trip> getTripsFilteredByRegion(string region)
 		{
-			return withDetails(trip_collection.Find(t => t.Region == region).ToList());
+			return withDetails(trip_collection.Find(t => t.Region == ObjectId.Parse(region)).ToList());
 		}
 
 		public List<Trip> getTripsFilteredByPrice(double min_price, double max_price)

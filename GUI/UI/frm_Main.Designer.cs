@@ -49,7 +49,7 @@
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-			this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(1404, 24);
 			this.menuStrip1.TabIndex = 3;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -110,22 +110,22 @@
 			// panelMain
 			// 
 			this.panelMain.AutoScroll = true;
-			this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelMain.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panelMain.Location = new System.Drawing.Point(0, 24);
-			this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.panelMain.Margin = new System.Windows.Forms.Padding(2);
 			this.panelMain.Name = "panelMain";
-			this.panelMain.Size = new System.Drawing.Size(1284, 937);
+			this.panelMain.Size = new System.Drawing.Size(1404, 937);
 			this.panelMain.TabIndex = 4;
 			// 
 			// frm_Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1284, 961);
+			this.ClientSize = new System.Drawing.Size(1404, 961);
 			this.Controls.Add(this.panelMain);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "frm_Main";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Dịch vụ quản lý xe Bus cho học sinh";

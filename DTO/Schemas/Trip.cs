@@ -12,11 +12,11 @@ namespace DTO.Schemas
     {
         public ObjectId Id { get; set; }
         public DateTime Date { get; set; }
-        public string Bus { get; set; }
-        public string Driver { get; set; }
-        public string School { get; set; }
-        public string Region { get; set; }
-        public List<string> Students { get; set; }
+        public ObjectId Bus { get; set; }
+        public ObjectId Driver { get; set; }
+        public ObjectId School { get; set; }
+        public ObjectId Region { get; set; }
+        public List<ObjectId> Students { get; set; }
         public double Price { get; set; }
         public string Status { get; set; }
 
