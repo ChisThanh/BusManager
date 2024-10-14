@@ -3,14 +3,17 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class DTO_Student : DTO_Base<Student>
+    public class DTO_Student 
     {
         private IMongoCollection<Student> _students;
-        public DTO_Student() : base("Student")
+
+        public DTO_Student()
         {
             var database = Database.Instance.GetDatabase();
             _students = database.GetCollection<Student>("Student");
@@ -20,10 +23,13 @@ namespace DTO
         {
             return _students.Find(student => student.Id == id).FirstOrDefault();
         }
-    
-        public void AddStudent(Student student)
+
+        public async Task<List<Student>> GetStudentsByRegionAsync(string regionName)
         {
-            _students.InsertOne(student);
+            // Tạo filter để tìm kiếm sinh viên có địa chỉ chứa tên quận
+            var filter = Builders<Student>.Filter.Regex(s => s.Address, new BsonRegularExpression(regionName, "i")); // 'i' cho không phân biệt chữ hoa chữ thường
+            var students = await _students.Find(filter).ToListAsync();
+            return students;
         }
 
         public void UpdateStudent(Student student)
@@ -36,6 +42,11 @@ namespace DTO
         {
             var filter = Builders<Student>.Filter.Eq(s => s.Id, student.Id);
             _students.DeleteOne(filter);
+        }
+
+        public void AddStudent(Student student)
+        {
+            _students.InsertOne(student);
         }
     }
 }
