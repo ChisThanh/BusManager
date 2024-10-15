@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static DTO.DTO_School;
+using DTO.DAL;
 
 
 namespace GUI.UI
@@ -22,6 +23,7 @@ namespace GUI.UI
         private DTO_Student _studentService = new DTO_Student();
         private DTO_School _schoolService;
         private DTO_Student _scheduleService;
+        private NBL_DAL dal = new NBL_DAL();
         
         private object txt_scheduleName;    
         
@@ -30,7 +32,9 @@ namespace GUI.UI
             InitializeComponent();
             _studentService = new DTO_Student();
             LoadStudents();
-        }
+            LoadSchools();
+
+		}
         private void ConfigureDataGridView(Guna.UI2.WinForms.Guna2DataGridView dgv)
         {
             dgv.ReadOnly = true;
@@ -53,7 +57,7 @@ namespace GUI.UI
         }
         private void LoadSchools()
         {
-            var schools = _schoolService.GetAllSchools();
+            var schools = dal.getSchools();
             cbb_school.DataSource = schools;
             cbb_school.DisplayMember = "Name"; // Tên trường sẽ hiển thị
             cbb_school.ValueMember = "Id"; // Giá trị của trường (Id) sẽ được lưu

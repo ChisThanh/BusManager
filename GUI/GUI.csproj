@@ -271,7 +271,6 @@
     <EmbeddedResource Include="UI\NVH_QLTruongHoc.resx">
       <DependentUpon>NVH_QLTruongHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include=".env.exemple" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
