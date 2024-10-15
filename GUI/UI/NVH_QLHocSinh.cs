@@ -22,7 +22,7 @@ namespace GUI.UI
         private DTO_Student _studentService = new DTO_Student();
         private DTO_School _schoolService;
         private DTO_Student _scheduleService;
-        private object txt_schoolName;
+        
         private object txt_scheduleName;    
         
         public NVH_QLHocSinh()
@@ -51,14 +51,14 @@ namespace GUI.UI
             ConfigureDataGridView(guna2DataGridView1);
             ConfigureDataGridView(guna2DataGridView2);
         }
-        //private void LoadSchools()
-        //{
-        //    var schools = _schoolService.GetAllSchools();
-        //    cbb_school.DataSource = schools;
-        //    cbb_school.DisplayMember = "Name"; // Tên trường sẽ hiển thị
-        //    cbb_school.ValueMember = "Id"; // Giá trị của trường (Id) sẽ được lưu
-        //}
-        
+        private void LoadSchools()
+        {
+            var schools = _schoolService.GetAllSchools();
+            cbb_school.DataSource = schools;
+            cbb_school.DisplayMember = "Name"; // Tên trường sẽ hiển thị
+            cbb_school.ValueMember = "Id"; // Giá trị của trường (Id) sẽ được lưu
+        }
+
 
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,38 +84,38 @@ namespace GUI.UI
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 
             }
         }
-        //private async Task LoadStudentsIntoDataGridView()
-        //{
-        //    try
-        //    {
-        //        var dtoSchool = new DTO_School();
-        //        var dtoStudent = new DTO_Student(); // Giả định bạn có một lớp DTO cho học sinh
-        //        var students = await dtoStudent.GetAllStudentsAsync(); // Phương thức lấy danh sách học sinh
+        private async Task LoadStudentsIntoDataGridView()
+        {
+            try
+            {
+                var dtoSchool = new DTO_School();
+                var dtoStudent = new DTO_Student(); // Giả định bạn có một lớp DTO cho học sinh
+                var students = await dtoStudent.GetAllStudentsAsync(); // Phương thức lấy danh sách học sinh
 
-        //        if (students == null || !students.Any())
-        //        {
-        //            MessageBox.Show("Không có dữ liệu học sinh.");
-        //            return;
-        //        }
+                if (students == null || !students.Any())
+                {
+                    MessageBox.Show("Không có dữ liệu học sinh.");
+                    return;
+                }
 
-        //        guna2DataGridView1.Rows.Clear();
+                guna2DataGridView1.Rows.Clear();
 
                
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Lỗi khi tải dữ liệu học sinh: {ex.Message}");
-        //    }
-        //}
-        //private async Task NVH_QLHocSinh_LoadAsync(object sender, EventArgs e)
-        //{
-        //    await showData_cbbSchool();
-        //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải dữ liệu học sinh: {ex.Message}");
+            }
+        }
+        private async Task NVH_QLHocSinh_LoadAsync(object sender, EventArgs e)
+        {
+            await showData_cbbSchool();
+        }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
@@ -145,7 +145,7 @@ namespace GUI.UI
             var selectedStudent = (DTO.Schemas.Student)guna2DataGridView1.CurrentRow.DataBoundItem;
             selectedStudent.Name = txt_name.Text;
             selectedStudent.DoB = dtp_dob.Value;
-            //selectedStudent.SchoolId = new ObjectId(cbb_school.SelectedValue.ToString());
+            selectedStudent.School = new ObjectId(cbb_school.SelectedValue.ToString());
             _studentService.UpdateStudent(selectedStudent);
             LoadStudents();
         }
@@ -161,7 +161,7 @@ namespace GUI.UI
                     Gender = txt_gender.Text,
                     Phone = txt_phone.Text,
                     Address = txt_adress.Text,
-                    //SchoolId = cbb_school.SelectedValue != null ? new ObjectId(cbb_school.SelectedValue.ToString()) : ObjectId.Empty
+                    School = cbb_school.SelectedValue != null ? new ObjectId(cbb_school.SelectedValue.ToString()) : ObjectId.Empty
                 };
 
                 _studentService.AddStudent(newStudent);
@@ -173,66 +173,66 @@ namespace GUI.UI
             }
         }
 
-        //private void cbb_school_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        // Kiểm tra nếu không có mục nào được chọn trong ComboBox
-        //        if (cbb_school.SelectedItem == null)
-        //        {
-        //            return;
-        //        }
+        private void cbb_school_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra nếu không có mục nào được chọn trong ComboBox
+                if (cbb_school.SelectedItem == null)
+                {
+                    return;
+                }
 
-        //        // Lấy tên trường được chọn từ ComboBox
-        //        string selectedSchoolName = cbb_school.SelectedItem.ToString();
+                // Lấy tên trường được chọn từ ComboBox
+                string selectedSchool = cbb_school.SelectedItem.ToString();
 
-        //        // Hiển thị tên trường được chọn
-        //        MessageBox.Show($"Bạn đã chọn: {selectedSchoolName}");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Lỗi khi chọn trường: {ex.Message}\n{ex.StackTrace}");
-        //    }
-        //}
-        //private async Task showData_cbbSchool()
-        //{
-        //    try
-        //    {
-        //        // Tạo đối tượng DTO_School
-        //        var dtoSchool = new DTO_School();
+                // Hiển thị tên trường được chọn
+                MessageBox.Show($"Bạn đã chọn: {selectedSchool}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi chọn trường: {ex.Message}\n{ex.StackTrace}");
+            }
+        }
+        private async Task showData_cbbSchool()
+        {
+            try
+            {
+                // Tạo đối tượng DTO_School
+                var dtoSchool = new DTO_School();
 
-        //        // Lấy danh sách các trường học
-        //        var schools = await Task.Run(() => dtoSchool.GetAllSchools());
+                // Lấy danh sách các trường học
+                var schools = await Task.Run(() => dtoSchool.GetAllSchools());
 
-        //        if (schools == null || !schools.Any())
-        //        {
-        //            MessageBox.Show("Không có dữ liệu trường học.");
-        //            return;
-        //        }
+                if (schools == null || !schools.Any())
+                {
+                    MessageBox.Show("Không có dữ liệu trường học.");
+                    return;
+                }
 
-        //        // Sắp xếp theo tên trường học
-        //        schools = schools.OrderBy(s => s.Name).ToList();
+                // Sắp xếp theo tên trường học
+                schools = schools.OrderBy(s => s.Name).ToList();
 
-        //        // Xóa dữ liệu cũ trên ComboBox
-        //        cbb_school.Items.Clear();
+                // Xóa dữ liệu cũ trên ComboBox
+                cbb_school.Items.Clear();
 
-        //        // Thêm tên trường vào ComboBox
-        //        foreach (var school in schools)
-        //        {
-        //            cbb_school.Items.Add(school.Name); // Chỉ thêm tên trường
-        //        }
+                // Thêm tên trường vào ComboBox
+                foreach (var school in schools)
+                {
+                    cbb_school.Items.Add(school.Name); // Chỉ thêm tên trường
+                }
 
-        //        // Chọn mục đầu tiên nếu có dữ liệu
-        //        if (cbb_school.Items.Count > 0)
-        //        {
-        //            cbb_school.SelectedIndex = 0;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Lỗi khi tải dữ liệu trường học: {ex.Message}\n{ex.StackTrace}");
-        //    }
-        //}
+                // Chọn mục đầu tiên nếu có dữ liệu
+                if (cbb_school.Items.Count > 0)
+                {
+                    cbb_school.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải dữ liệu trường học: {ex.Message}\n{ex.StackTrace}");
+            }
+        }
         private void LoadSchedules(List<string> schedules)
         {
             DataTable dt = new DataTable();

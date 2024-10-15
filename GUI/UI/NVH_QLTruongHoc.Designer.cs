@@ -1,4 +1,5 @@
-﻿namespace GUI.UI { 
+﻿namespace GUI.UI
+{
     partial class NVH_QLTruongHoc
     {
         /// <summary>
@@ -277,7 +278,6 @@
             this.Controls.Add(this.btn_updateschool);
             this.Controls.Add(this.btn_deleteschool);
             this.Controls.Add(this.btn_addschool);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NVH_QLTruongHoc";
             this.Text = "NVH_QLTruongHoc";
             this.Load += new System.EventHandler(this.NVH_QLTruongHoc_Load);

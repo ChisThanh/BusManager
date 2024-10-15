@@ -48,5 +48,10 @@ namespace DTO
         {
             _students.InsertOne(student);
         }
+
+        public async Task<IEnumerable<object>> GetAllStudentsAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
