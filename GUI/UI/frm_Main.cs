@@ -40,8 +40,8 @@ namespace GUI
         private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_Statistical frm_Statistical = new frm_Statistical();
-            frm_Statistical.Show();
-        }
+			showForm(frm_Statistical);
+		}
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -186,11 +186,11 @@
 			// 
 			this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Title.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Title.Location = new System.Drawing.Point(41, 20);
+			this.lbl_Title.Location = new System.Drawing.Point(5, 20);
 			this.lbl_Title.Name = "lbl_Title";
-			this.lbl_Title.Size = new System.Drawing.Size(212, 88);
+			this.lbl_Title.Size = new System.Drawing.Size(248, 88);
 			this.lbl_Title.TabIndex = 14;
-			this.lbl_Title.Text = "Quản Lý Học Sinh";
+			this.lbl_Title.Text = "Quản Lý Trường Học";
 			this.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// btn_addschool
