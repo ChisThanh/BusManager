@@ -172,7 +172,7 @@
 			this.lbl_StudentHeader.Name = "lbl_StudentHeader";
 			this.lbl_StudentHeader.Size = new System.Drawing.Size(680, 44);
 			this.lbl_StudentHeader.TabIndex = 52;
-			this.lbl_StudentHeader.Text = "     Thông Tin Sinh Viên";
+			this.lbl_StudentHeader.Text = "     Thông Tin Học Sinh";
 			this.lbl_StudentHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// rbn_Status
