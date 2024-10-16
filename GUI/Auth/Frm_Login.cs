@@ -28,8 +28,8 @@ namespace GUI.Auth
             btnSubmit.Click += BtnSubmit_Click;
             btnRegister.Click += BtnRegister_Click;
             btn_Close.Click += Btn_Close_Click;
-            txtAccount.Text = "sadmin@mail.com";
-            txtPassword.Text = "123";
+            //txtAccount.Text = "sadmin@mail.com";
+            //txtPassword.Text = "123";
         }
 
         private void Btn_Close_Click(object sender, EventArgs e)

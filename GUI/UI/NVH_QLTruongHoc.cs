@@ -31,8 +31,16 @@ namespace GUI.UI
         }
         private void NVH_QLTruongHoc_Load(object sender, EventArgs e)
         {
-
-        }
+			guna2DataGridView2.ReadOnly = true;
+			guna2DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			guna2DataGridView2.RowHeadersVisible = false;
+			guna2DataGridView2.AllowUserToAddRows = false;
+			guna2DataGridView2.AllowUserToDeleteRows = false;
+			guna2DataGridView2.AllowUserToOrderColumns = false;
+			guna2DataGridView2.AllowUserToResizeColumns = false;
+			guna2DataGridView2.AllowUserToResizeRows = false;
+			guna2DataGridView2.ColumnHeadersHeight = 40;
+		}
 
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -88,5 +96,5 @@ namespace GUI.UI
                 MessageBox.Show($"Error retrieving school details: {ex.Message}");
             }
         }
-    }
+	}
 }

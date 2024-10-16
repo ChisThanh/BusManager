@@ -270,8 +270,6 @@
     <Compile Include="Schemas\School.cs" />
     <Compile Include="Schemas\Student.cs" />
     <Compile Include="Schemas\Trip.cs" />
-    <Compile Include="Schemas\Region.cs" />
-    <Compile Include="Schemas\Student.cs" />
     <Compile Include="Schemas\User.cs" />
   </ItemGroup>
   <ItemGroup>

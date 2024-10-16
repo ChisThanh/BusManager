@@ -271,7 +271,6 @@
     <EmbeddedResource Include="UI\NVH_QLTruongHoc.resx">
       <DependentUpon>NVH_QLTruongHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include=".env.exemple" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -313,6 +312,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\save_icon.png" />
+    <None Include="Resources\search_icon.png" />
     <None Include="Resources\loading_picture.png" />
     <None Include="Resources\colored_star_icon.png" />
     <None Include="Resources\star_icon.png" />

@@ -53,7 +53,7 @@
 			this.pnl_Trip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
 			this.pnl_Trip.Location = new System.Drawing.Point(0, 0);
 			this.pnl_Trip.Name = "pnl_Trip";
-			this.pnl_Trip.Size = new System.Drawing.Size(275, 100);
+			this.pnl_Trip.Size = new System.Drawing.Size(300, 100);
 			this.pnl_Trip.TabIndex = 0;
 			// 
 			// pnl_Click
@@ -61,7 +61,7 @@
 			this.pnl_Click.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pnl_Click.Location = new System.Drawing.Point(0, 0);
 			this.pnl_Click.Name = "pnl_Click";
-			this.pnl_Click.Size = new System.Drawing.Size(275, 100);
+			this.pnl_Click.Size = new System.Drawing.Size(300, 100);
 			this.pnl_Click.TabIndex = 2;
 			this.pnl_Click.UseTransparentBackground = true;
 			// 
@@ -73,7 +73,7 @@
 			this.pnl_Info.Controls.Add(this.lbl_Date);
 			this.pnl_Info.Location = new System.Drawing.Point(98, 10);
 			this.pnl_Info.Name = "pnl_Info";
-			this.pnl_Info.Size = new System.Drawing.Size(157, 82);
+			this.pnl_Info.Size = new System.Drawing.Size(187, 82);
 			this.pnl_Info.TabIndex = 1;
 			// 
 			// lbl_Region
@@ -82,7 +82,7 @@
 			this.lbl_Region.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbl_Region.Location = new System.Drawing.Point(0, 40);
 			this.lbl_Region.Name = "lbl_Region";
-			this.lbl_Region.Size = new System.Drawing.Size(157, 22);
+			this.lbl_Region.Size = new System.Drawing.Size(187, 22);
 			this.lbl_Region.TabIndex = 3;
 			this.lbl_Region.Text = "REGION";
 			this.lbl_Region.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,7 +93,7 @@
 			this.lbl_School.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbl_School.Location = new System.Drawing.Point(0, 62);
 			this.lbl_School.Name = "lbl_School";
-			this.lbl_School.Size = new System.Drawing.Size(157, 20);
+			this.lbl_School.Size = new System.Drawing.Size(187, 20);
 			this.lbl_School.TabIndex = 2;
 			this.lbl_School.Text = "SCHOOL";
 			this.lbl_School.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,7 +104,7 @@
 			this.lbl_Bus.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbl_Bus.Location = new System.Drawing.Point(0, 20);
 			this.lbl_Bus.Name = "lbl_Bus";
-			this.lbl_Bus.Size = new System.Drawing.Size(157, 20);
+			this.lbl_Bus.Size = new System.Drawing.Size(187, 20);
 			this.lbl_Bus.TabIndex = 1;
 			this.lbl_Bus.Text = "BUS";
 			this.lbl_Bus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,7 +115,7 @@
 			this.lbl_Date.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbl_Date.Location = new System.Drawing.Point(0, 0);
 			this.lbl_Date.Name = "lbl_Date";
-			this.lbl_Date.Size = new System.Drawing.Size(157, 20);
+			this.lbl_Date.Size = new System.Drawing.Size(187, 20);
 			this.lbl_Date.TabIndex = 0;
 			this.lbl_Date.Text = "DATE";
 			this.lbl_Date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +141,7 @@
 			this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "NBL_ComponentTrip";
-			this.Size = new System.Drawing.Size(275, 100);
+			this.Size = new System.Drawing.Size(300, 100);
 			this.pnl_Trip.ResumeLayout(false);
 			this.pnl_Info.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pbx_Status)).EndInit();

@@ -26,7 +26,17 @@ namespace GUI.UI
             btn_Update.Click += Btn_Update_Click;
             btn_Delete.Click += Btn_Delete_Click;
             showData_cbbNameRegion();
-        }
+
+			dgv_Students.ReadOnly = true;
+			dgv_Students.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			dgv_Students.RowHeadersVisible = false;
+			dgv_Students.AllowUserToAddRows = false;
+			dgv_Students.AllowUserToDeleteRows = false;
+			dgv_Students.AllowUserToOrderColumns = false;
+			dgv_Students.AllowUserToResizeColumns = false;
+			dgv_Students.AllowUserToResizeRows = false;
+			dgv_Students.ColumnHeadersHeight = 40;
+		}
 
         private async void Btn_Delete_Click(object sender, EventArgs e)
         {

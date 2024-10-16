@@ -41,5 +41,10 @@ namespace DTO
             var filter = Builders<School>.Filter.Eq(s => s.Id, schoolId.Id);
             _schools.DeleteOne(filter);
         }
+
+        public async Task<IEnumerable<object>> GetAllStudentsAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

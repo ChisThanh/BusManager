@@ -84,7 +84,17 @@ namespace GUI.UI
             LoadDriverData();
 
             txt_LicenseID.KeyPress += new KeyPressEventHandler(txtLicenseID_KeyPress);
-        }
+
+			dgv_Driver.ReadOnly = true;
+			dgv_Driver.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			dgv_Driver.RowHeadersVisible = false;
+			dgv_Driver.AllowUserToAddRows = false;
+			dgv_Driver.AllowUserToDeleteRows = false;
+			dgv_Driver.AllowUserToOrderColumns = false;
+			dgv_Driver.AllowUserToResizeColumns = false;
+			dgv_Driver.AllowUserToResizeRows = false;
+			dgv_Driver.ColumnHeadersHeight = 40;
+		}
         private void btn_Add_Click(object sender, EventArgs e)
         {
             EnableInputFields();
