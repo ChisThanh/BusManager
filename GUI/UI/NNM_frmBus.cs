@@ -44,7 +44,17 @@ namespace GUI.UI
             btn_Delete.Enabled = false;
             btn_Update.Enabled = false;
             btn_Save.Enabled = false;
-        }
+
+			dgv_Bus.ReadOnly = true;
+			dgv_Bus.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			dgv_Bus.RowHeadersVisible = false;
+			dgv_Bus.AllowUserToAddRows = false;
+			dgv_Bus.AllowUserToDeleteRows = false;
+			dgv_Bus.AllowUserToOrderColumns = false;
+			dgv_Bus.AllowUserToResizeColumns = false;
+			dgv_Bus.AllowUserToResizeRows = false;
+			dgv_Bus.ColumnHeadersHeight = 40;
+		}
         private void btn_Add_Click(object sender, EventArgs e)
         {
             // Enable các textbox

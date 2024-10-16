@@ -591,7 +591,7 @@ namespace GUI.UI
 		{
 			int top_margin = 10;
 			int left_margin = 10;
-			int component_width = 275;
+			int component_width = 300;
 			int component_height = 100;
 			int component_per_row = 2;
 

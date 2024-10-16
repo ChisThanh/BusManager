@@ -44,17 +44,16 @@
 			this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
 			this.pnl_Control = new Guna.UI2.WinForms.Guna2Panel();
 			this.lbl_Title = new System.Windows.Forms.Label();
-			this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
-			this.btn_add = new Guna.UI2.WinForms.Guna2Button();
 			this.lbl_Price = new System.Windows.Forms.Label();
 			this.lbl_Region = new System.Windows.Forms.Label();
 			this.lbl_School = new System.Windows.Forms.Label();
 			this.lbl_Driver = new System.Windows.Forms.Label();
 			this.lbl_Bus = new System.Windows.Forms.Label();
 			this.lbl_Date = new System.Windows.Forms.Label();
-			this.btn_update = new Guna.UI2.WinForms.Guna2Button();
 			this.label1 = new System.Windows.Forms.Label();
-			this.dtp_schedule = new Guna.UI2.WinForms.Guna2DateTimePicker();
+			this.btn_add = new Guna.UI2.WinForms.Guna2Button();
+			this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
+			this.btn_update = new Guna.UI2.WinForms.Guna2Button();
 			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
 			this.pnl_Control.SuspendLayout();
@@ -78,17 +77,17 @@
 			this.txt_name.PasswordChar = '\0';
 			this.txt_name.PlaceholderText = "";
 			this.txt_name.SelectedText = "";
-			this.txt_name.Size = new System.Drawing.Size(485, 36);
+			this.txt_name.Size = new System.Drawing.Size(476, 36);
 			this.txt_name.TabIndex = 4;
 			// 
 			// guna2DataGridView1
 			// 
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.Gray;
+			this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
 			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -98,7 +97,7 @@
 			this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
 			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -106,7 +105,7 @@
 			this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
 			this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.guna2DataGridView1.Location = new System.Drawing.Point(630, 11);
-			this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
 			this.guna2DataGridView1.Name = "guna2DataGridView1";
 			this.guna2DataGridView1.RowHeadersVisible = false;
 			this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -118,18 +117,18 @@
 			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
 			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
 			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-			this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.Gray;
+			this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
 			this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
 			this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
 			this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-			this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
 			this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
 			this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -154,7 +153,7 @@
 			this.txt_gender.PasswordChar = '\0';
 			this.txt_gender.PlaceholderText = "";
 			this.txt_gender.SelectedText = "";
-			this.txt_gender.Size = new System.Drawing.Size(485, 36);
+			this.txt_gender.Size = new System.Drawing.Size(476, 36);
 			this.txt_gender.TabIndex = 6;
 			// 
 			// txt_adress
@@ -175,7 +174,7 @@
 			this.txt_adress.PasswordChar = '\0';
 			this.txt_adress.PlaceholderText = "";
 			this.txt_adress.SelectedText = "";
-			this.txt_adress.Size = new System.Drawing.Size(485, 36);
+			this.txt_adress.Size = new System.Drawing.Size(476, 36);
 			this.txt_adress.TabIndex = 11;
 			// 
 			// txt_phone
@@ -196,20 +195,21 @@
 			this.txt_phone.PasswordChar = '\0';
 			this.txt_phone.PlaceholderText = "";
 			this.txt_phone.SelectedText = "";
-			this.txt_phone.Size = new System.Drawing.Size(485, 36);
+			this.txt_phone.Size = new System.Drawing.Size(476, 36);
 			this.txt_phone.TabIndex = 13;
 			// 
 			// dtp_dob
 			// 
 			this.dtp_dob.Checked = true;
 			this.dtp_dob.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dtp_dob.ForeColor = System.Drawing.Color.Black;
 			this.dtp_dob.Format = System.Windows.Forms.DateTimePickerFormat.Long;
 			this.dtp_dob.Location = new System.Drawing.Point(140, 242);
-			this.dtp_dob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dtp_dob.Margin = new System.Windows.Forms.Padding(2);
 			this.dtp_dob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
 			this.dtp_dob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
 			this.dtp_dob.Name = "dtp_dob";
-			this.dtp_dob.Size = new System.Drawing.Size(485, 36);
+			this.dtp_dob.Size = new System.Drawing.Size(476, 36);
 			this.dtp_dob.TabIndex = 16;
 			this.dtp_dob.Value = new System.DateTime(2024, 10, 12, 14, 25, 36, 192);
 			// 
@@ -224,19 +224,19 @@
 			this.cbb_school.ForeColor = System.Drawing.Color.Black;
 			this.cbb_school.ItemHeight = 30;
 			this.cbb_school.Location = new System.Drawing.Point(141, 370);
-			this.cbb_school.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cbb_school.Margin = new System.Windows.Forms.Padding(2);
 			this.cbb_school.Name = "cbb_school";
-			this.cbb_school.Size = new System.Drawing.Size(485, 36);
+			this.cbb_school.Size = new System.Drawing.Size(476, 36);
 			this.cbb_school.TabIndex = 18;
 			// 
 			// guna2DataGridView2
 			// 
 			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-			this.guna2DataGridView2.BackgroundColor = System.Drawing.Color.Gray;
+			this.guna2DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
 			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -246,7 +246,7 @@
 			this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
 			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -254,30 +254,30 @@
 			this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
 			this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.guna2DataGridView2.Location = new System.Drawing.Point(9, 470);
-			this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(2);
 			this.guna2DataGridView2.Name = "guna2DataGridView2";
 			this.guna2DataGridView2.RowHeadersVisible = false;
 			this.guna2DataGridView2.RowHeadersWidth = 51;
 			this.guna2DataGridView2.RowTemplate.Height = 24;
-			this.guna2DataGridView2.Size = new System.Drawing.Size(617, 319);
+			this.guna2DataGridView2.Size = new System.Drawing.Size(608, 319);
 			this.guna2DataGridView2.TabIndex = 19;
 			this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
 			this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
 			this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
 			this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-			this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.Gray;
+			this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
 			this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
 			this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 4;
 			this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
 			this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-			this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+			this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
 			this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 24;
 			this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -298,7 +298,7 @@
 			this.pnl_Control.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
 			this.pnl_Control.Location = new System.Drawing.Point(12, 11);
 			this.pnl_Control.Name = "pnl_Control";
-			this.pnl_Control.Size = new System.Drawing.Size(613, 129);
+			this.pnl_Control.Size = new System.Drawing.Size(604, 129);
 			this.pnl_Control.TabIndex = 20;
 			// 
 			// lbl_Title
@@ -307,50 +307,10 @@
 			this.lbl_Title.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbl_Title.Location = new System.Drawing.Point(41, 20);
 			this.lbl_Title.Name = "lbl_Title";
-			this.lbl_Title.Size = new System.Drawing.Size(234, 88);
+			this.lbl_Title.Size = new System.Drawing.Size(212, 88);
 			this.lbl_Title.TabIndex = 14;
 			this.lbl_Title.Text = "Quản Lý Học Sinh";
 			this.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// btn_delete
-			// 
-			this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btn_delete.FillColor = System.Drawing.Color.Tomato;
-			this.btn_delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_delete.ForeColor = System.Drawing.Color.Black;
-			this.btn_delete.Image = global::GUI.Properties.Resources.delete_icon;
-			this.btn_delete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
-			this.btn_delete.Location = new System.Drawing.Point(379, 45);
-			this.btn_delete.Name = "btn_delete";
-			this.btn_delete.Size = new System.Drawing.Size(104, 36);
-			this.btn_delete.TabIndex = 29;
-			this.btn_delete.Text = "Xóa";
-			this.btn_delete.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-			// 
-			// btn_add
-			// 
-			this.btn_add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btn_add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btn_add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btn_add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btn_add.FillColor = System.Drawing.Color.LightGreen;
-			this.btn_add.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_add.ForeColor = System.Drawing.Color.Black;
-			this.btn_add.Image = global::GUI.Properties.Resources.insert_icon;
-			this.btn_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btn_add.ImageSize = new System.Drawing.Size(30, 30);
-			this.btn_add.Location = new System.Drawing.Point(269, 45);
-			this.btn_add.Name = "btn_add";
-			this.btn_add.Size = new System.Drawing.Size(104, 36);
-			this.btn_add.TabIndex = 28;
-			this.btn_add.Text = "Thêm";
-			this.btn_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
 			// 
 			// lbl_Price
 			// 
@@ -412,6 +372,56 @@
 			this.lbl_Date.Text = "Tên Học Sinh";
 			this.lbl_Date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
+			// label1
+			// 
+			this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(14, 432);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(122, 36);
+			this.label1.TabIndex = 40;
+			this.label1.Text = "Lịch Học";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// btn_add
+			// 
+			this.btn_add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btn_add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btn_add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btn_add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btn_add.FillColor = System.Drawing.Color.LightGreen;
+			this.btn_add.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_add.ForeColor = System.Drawing.Color.Black;
+			this.btn_add.Image = global::GUI.Properties.Resources.insert_icon;
+			this.btn_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btn_add.ImageSize = new System.Drawing.Size(30, 30);
+			this.btn_add.Location = new System.Drawing.Point(259, 45);
+			this.btn_add.Name = "btn_add";
+			this.btn_add.Size = new System.Drawing.Size(104, 36);
+			this.btn_add.TabIndex = 28;
+			this.btn_add.Text = "Thêm";
+			this.btn_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+			// 
+			// btn_delete
+			// 
+			this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btn_delete.FillColor = System.Drawing.Color.Tomato;
+			this.btn_delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_delete.ForeColor = System.Drawing.Color.Black;
+			this.btn_delete.Image = global::GUI.Properties.Resources.delete_icon;
+			this.btn_delete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
+			this.btn_delete.Location = new System.Drawing.Point(369, 45);
+			this.btn_delete.Name = "btn_delete";
+			this.btn_delete.Size = new System.Drawing.Size(104, 36);
+			this.btn_delete.TabIndex = 29;
+			this.btn_delete.Text = "Xóa";
+			this.btn_delete.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+			// 
 			// btn_update
 			// 
 			this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -424,7 +434,7 @@
 			this.btn_update.Image = global::GUI.Properties.Resources.update_icon;
 			this.btn_update.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
 			this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
-			this.btn_update.Location = new System.Drawing.Point(489, 45);
+			this.btn_update.Location = new System.Drawing.Point(479, 45);
 			this.btn_update.Name = "btn_update";
 			this.btn_update.Size = new System.Drawing.Size(104, 36);
 			this.btn_update.TabIndex = 30;
@@ -432,37 +442,11 @@
 			this.btn_update.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
 			this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
 			// 
-			// label1
-			// 
-			this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(14, 410);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(122, 36);
-			this.label1.TabIndex = 40;
-			this.label1.Text = "Lịch Học";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// dtp_schedule
-			// 
-			this.dtp_schedule.Checked = true;
-			this.dtp_schedule.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dtp_schedule.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-			this.dtp_schedule.Location = new System.Drawing.Point(141, 410);
-			this.dtp_schedule.Margin = new System.Windows.Forms.Padding(2);
-			this.dtp_schedule.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-			this.dtp_schedule.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-			this.dtp_schedule.Name = "dtp_schedule";
-			this.dtp_schedule.Size = new System.Drawing.Size(485, 36);
-			this.dtp_schedule.TabIndex = 41;
-			this.dtp_schedule.Value = new System.DateTime(2024, 10, 12, 14, 25, 36, 192);
-			// 
 			// NVH_QLHocSinh
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1400, 800);
-			this.Controls.Add(this.dtp_schedule);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.lbl_Price);
 			this.Controls.Add(this.lbl_Region);
@@ -479,8 +463,9 @@
 			this.Controls.Add(this.txt_gender);
 			this.Controls.Add(this.guna2DataGridView1);
 			this.Controls.Add(this.txt_name);
+			this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "NVH_QLHocSinh";
 			this.Text = "NVH_QLHocSinh";
 			this.Load += new System.EventHandler(this.NVH_QLHocSinh_Load);
@@ -512,6 +497,5 @@
 		private System.Windows.Forms.Label lbl_Date;
 		private Guna.UI2.WinForms.Guna2Button btn_update;
 		private System.Windows.Forms.Label label1;
-		private Guna.UI2.WinForms.Guna2DateTimePicker dtp_schedule;
 	}
 }
